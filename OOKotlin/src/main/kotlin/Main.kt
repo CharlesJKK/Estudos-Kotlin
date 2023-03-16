@@ -1,4 +1,66 @@
-import javax.xml.crypto.Data
+fun main(args: Array<String>) {
+
+    val userA = User("Charles", true)
+    userA.lastName = "Junior"
+    userA.output()
+
+    val userB = User("Pele")//Sobrecargada de constructor 2
+    userB.printNameUpperCase()
+    println(userB.getNameLength())
+
+    User.resetCount()//Chamando o comportamento da classe, chamando ela diretamente sem instanciar o objeto
+
+    val userC = User() //Sobrecargada de constructor 3
+    println(userC.getNameLength())
+
+    login(userA)
+    println(Database.name)
+    println(Database.userIsLogged?.name)
+
+
+
+
+    val maguinhoCantor = Musician()
+    maguinhoCantor.style = "Metal Rock"
+    maguinhoCantor.desc()
+
+    val guitar = Musician.Guitar()//Exemplo de classe aninhada
+    guitar.desc()
+
+    val sax = maguinhoCantor.Sax() //Exemplode Inner class, bom para hierarquia e para instanciar o objeto
+    // tem que esta "vivo"
+    sax.desc()
+
+    val creditCardApiName = "visa"
+    println(CreditCard.valueOf(creditCardApiName.uppercase()))
+}
+
+class Musician{ //Class com um exemplo de classe nested e uma inner
+    var style: String = "Rock"
+    fun desc() = println("Meu estilo é: $style")
+
+    class Guitar {
+        var strings = 6
+        fun desc() = println("tocando uma guitarra com $strings cordas")
+    }
+
+    inner class Sax{
+        var family = "Saxofone soprano"
+        fun desc() = println("Família: $family e eu toco: $style")
+    }
+}
+
+enum class CreditCard(val label: String) {
+    VISA("Visa"),
+    MASTER("Mastercard"),
+    ELO("Elo"),
+    AMEX("American Express")
+}
+
+fun login(user: User){
+    Database.userIsLogged = user
+}
+
 
 //Class é como se fosse um molde responsavel por criar N objetos com propriedades ou comportamentos
 //Constructor uma forma de predefinir propriedades podendo ser iniciada como
@@ -17,30 +79,10 @@ import javax.xml.crypto.Data
 /*Objetos Unicos: um Objeto que só pode existir um(SINGLETON), diferente de um objeto normal que vc pode instanciar varios objetos
  exemplo em Database.kt*/
 
+/*Tipos de classes:
+ 1: Classes aninhadas (Nested Class)
+ 2: Classes internas (Inner Class)
+ 3: Classes enumeradas (Enum Class)*/
 
-fun main(args: Array<String>) {
-
-    val userA = User("Charles", true)
-    userA.printNameUpperCase()
-    println(userA.getNameLength())
-
-    val userB = User("Pele")
-    userB.printNameUpperCase()
-    println(userB.getNameLength())
-
-    User.resetCount()//Chamando o comportamento da classe, chamando ela diretamente sem instanciar o objeto
-
-    val userC = User()
-    println(userC.getNameLength())
-
-    login(userA)
-    println(Database.name)
-    println(Database.userIsLogged?.name)
-
-}
-
-fun login(user: User){
-    Database.userIsLogged = user
-}
 
 
