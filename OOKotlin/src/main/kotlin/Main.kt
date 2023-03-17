@@ -97,6 +97,8 @@ fun login(user: User){
  4: Classes enumeradas (Enum Class)
  Boas práticas com Enum: geralmente o Enum é muito utilizado em conjunto com condições When*/
 
+//Desestruturação de classes.
+
 
 
 
