@@ -1,8 +1,13 @@
 fun main(args: Array<String>) {
 
     val userA = User("Charles", true)
-    userA.lastName = "Junior"
-    userA.output()
+    //Exemplo de when apenas com if e else direto.
+    when {
+        userA.name == "Charles" -> {
+            println("Charles também foi encontrado em outro banco de dados")
+        }
+        else -> println("Nem em outro banco de dados o usuário foi encontrado")
+    }
 
     val userB = User("Pele")//Sobrecargada de constructor 2
     userB.printNameUpperCase()
@@ -32,7 +37,13 @@ fun main(args: Array<String>) {
     sax.desc()
 
     val creditCardApiName = "visa"
-    println(CreditCard.valueOf(creditCardApiName.uppercase()))
+    val card = CreditCard.valueOf(creditCardApiName.uppercase())
+
+    //Reforçando when
+    when(card){
+        CreditCard.VISA -> println("Ganhou desconto!")
+        else -> println("Seu cartão não tem desconto, utilize um visa caso queira 40% de desconto.")
+    }
 }
 
 class Musician{ //Class com um exemplo de classe nested e uma inner
@@ -82,7 +93,10 @@ fun login(user: User){
 /*Tipos de classes:
  1: Classes aninhadas (Nested Class)
  2: Classes internas (Inner Class)
- 3: Classes enumeradas (Enum Class)*/
+ 3: Data class: Exemplo no arquivo DataClass
+ 4: Classes enumeradas (Enum Class)
+ Boas práticas com Enum: geralmente o Enum é muito utilizado em conjunto com condições When*/
+
 
 
 

@@ -6,7 +6,7 @@ class User constructor(var name: String, var isAdmin: Boolean = false){
     //lateinit var evita usar nullable e não preciso passar um valor inicial, mas preciso obrigatoriamente atribuir
     //um valor para a variável depois
     lateinit var lastName: String
-    
+
     private val hairColor: String = "Black"//Visível apenas aqui dentro
 
     companion object {
