@@ -99,13 +99,6 @@ fun login(user: User){
 
 //Desestruturação de classes em Destructuring.kt
 
-/*vararg serve para passar n parametros sem precisar declarar.
- EX:  fun media(vararg notas: Float) : Float{
- }
-
- fun main(){
- println(media(10f, 8f, 20f, 10f, 50f))} sendo possível passar 5 argumentos sem precisar declarar todos.
- */
 
 
 
