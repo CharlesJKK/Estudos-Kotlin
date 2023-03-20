@@ -97,7 +97,15 @@ fun login(user: User){
  4: Classes enumeradas (Enum Class)
  Boas práticas com Enum: geralmente o Enum é muito utilizado em conjunto com condições When*/
 
-//Desestruturação de classes.
+//Desestruturação de classes em Destructuring.kt
+
+/*vararg serve para passar n parametros sem precisar declarar.
+ EX:  fun media(vararg notas: Float) : Float{
+ }
+
+ fun main(){
+ println(media(10f, 8f, 20f, 10f, 50f))} sendo possível passar 5 argumentos sem precisar declarar todos.
+ */
 
 
 
