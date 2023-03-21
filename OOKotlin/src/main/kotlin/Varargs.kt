@@ -27,3 +27,11 @@ fun <T>mediaGenerica(vararg notas: T): Float {
 }
 
 
+// Entendendo Any, Unit e Nothing
+// Unit diz que a função não tem retorno
+// Nothing(colocado no lugar do Unit abaixo) é um tipo usado pra retornar uma exceção da função
+fun valores(value: Any): Unit{//Pode receber qualquer valor e funciona como um parametro generico
+
+}
+
+
