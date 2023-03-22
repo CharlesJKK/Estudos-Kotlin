@@ -98,7 +98,8 @@ fun login(user: User){
  Boas práticas com Enum: geralmente o Enum é muito utilizado em conjunto com condições When*/
 
 //Desestruturação de classes em Destructuring.kt
-
+//modules: modulo, são praticamente os arquivos criados para a criação da codigo.
+//Internal serve para dizer que aquela classe só fica disponivel naquele modulo, evitando alterações em propriedades.
 
 
 
