@@ -1,16 +1,19 @@
 fun main(){
+    val nicole = Musicia("Nicole")
+    val kiko = Musicia("Kiko")
+    val viktoria = Musicia("Viktoria")
+
     val g = Guitar("Giver")
-    g.tune()
-    g.jingle()
+    g.jingle(nicole)
 
     val f = Flute("Fender")
-    f.tune()
-    g.jingle()
+    f.jingle(kiko)
 
     val v = Violin("Gender IV")
-    v.tune()
-    v.jingle()
+    v.jingle(viktoria)
 }
+
+class Musicia(val name: String)
 
 internal class InstrumentStrings(val numeroDeCordas: Int, val marca: String)//Essa classe só fica disponível em instrumento.kt
 
@@ -22,10 +25,14 @@ abstract class Instrument(var name: String){
         instrumentStrings = InstrumentStrings(num, marca)
     }
 
-    abstract fun tune()
+    abstract fun tune(): Boolean
 
-    fun jingle(){
-
+    fun jingle(musicia: Musicia){
+        if (tune()){
+            println("Tocando o... $name, pelo ${musicia.name}")
+        }else{
+            println("Por favor ${musicia.name}, afine o instrumento $name")
+        }
     }
 }
 
@@ -38,21 +45,26 @@ class Guitar(name: String): StringInstrument(name, 6){
         addStrings(10, "NIG")
     }
 
-    override fun tune() {
+    override fun tune(): Boolean {
         println("Afinação em E(MI)")
+
+        return true
     }
 }
 
 class Violin(name: String) : StringInstrument(name, 4){
 
-    override fun tune() {
-        println("Afinação em D(RÉ)")
+    override fun tune(): Boolean {
+
+        return false
     }
 }
 
 class Flute(name:String): Instrument(name){
-    override fun tune() {
+    override fun tune(): Boolean {
         println("Afinação em C(D6)")
+
+        return true
     }
 }
 
