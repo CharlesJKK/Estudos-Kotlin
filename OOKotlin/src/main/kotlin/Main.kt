@@ -32,7 +32,7 @@ fun main(args: Array<String>) {
     val guitar = Musician.Guitar()//Exemplo de classe aninhada
     guitar.desc()
 
-    val sax = maguinhoCantor.Sax() //Exemplode Inner class, bom para hierarquia e para instanciar o objeto
+    val sax = maguinhoCantor.Sax() //Exemplo de Inner class, bom para hierarquia e para instanciar o objeto
     // tem que esta "vivo"
     sax.desc()
 
@@ -100,6 +100,8 @@ fun login(user: User){
 //Desestruturação de classes em Destructuring.kt
 //modules: modulo, são praticamente os arquivos criados para a criação da codigo.
 //Internal serve para dizer que aquela classe só fica disponivel naquele modulo, evitando alterações em propriedades.
+//Entendendo open em heranca.kt
+//exemplos de abstração nos arquivos Heranca.kt e em instrumento.kt
 
 
 

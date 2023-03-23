@@ -22,8 +22,9 @@ fun main(){
 }
 
 //class people é uma super class, que é a classe que vc herda propriedades
-//open permite que outras classes possam herdar da classe com o open
-open class People(var name: String, var address: String){
+//open permite que outras classes possam herdar da classe com o open(fica onde está o abstract)
+//abstract serve para que você possa evitar istanciar a classe pai(pois ela não precisa ser instanciada)
+abstract class People(var name: String, var address: String){
 
     protected var accessLevel = false
     //protected -> somente classes filhas podem ter acesso a essa variavel ou funções se declarado numa função
