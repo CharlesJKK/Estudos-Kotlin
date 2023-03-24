@@ -1,4 +1,4 @@
-fun main(){
+/*fun main(){
     val nicole = Musicia("Nicole")
     val kiko = Musicia("Kiko")
     val viktoria = Musicia("Viktoria")
@@ -68,3 +68,6 @@ class Flute(name:String): Instrument(name){
     }
 }
 
+*/
+
+//Comentado para fazer os testes em interfaces.

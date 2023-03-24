@@ -102,7 +102,7 @@ fun login(user: User){
 //Internal serve para dizer que aquela classe só fica disponivel naquele modulo, evitando alterações em propriedades.
 //Entendendo open em heranca.kt
 //exemplos de abstração nos arquivos Heranca.kt e em instrumento.kt
-
+//Interfaces:
 
 
 
