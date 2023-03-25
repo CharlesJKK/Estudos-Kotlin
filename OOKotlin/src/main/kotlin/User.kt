@@ -17,13 +17,13 @@ class User constructor(var name: String, var isAdmin: Boolean = false){
         var count = 0
 
         fun resetCount(){
-            count = 0
+             count = 0
         }
     }
 
     init {
         count++
-        println(count)
+        //println(count)
     }
 
     constructor(name: String) : this(name, false){

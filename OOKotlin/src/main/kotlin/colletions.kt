@@ -1,6 +1,26 @@
 
 
 fun main() {
+
+    //setOf é uma coleção que não permite adicionar elementos repetidos
+    //setOf é imutavel
+    //multableSetOf é mutavel
+    val users = setOf(
+        UserEx("Tiago", true),
+        UserEx("Tia", false),
+        UserEx("Tiago", true),
+    )
+
+    users.forEach { println(it) }
+
+
+
+
+
+
+
+
+
     /*
     //Arrays são praticamentes coleções estáticas, com valores fixos.
 
@@ -19,7 +39,7 @@ fun main() {
 
     newList.forEach { println(it) }
 
-     */
+
 //----------------------------------------------------------------------------------------------
 
     //Lists - são coleções dinâmicas e que é imutavel -> listOf
@@ -53,7 +73,7 @@ fun main() {
 
     //println(users.isEmpty()) -> Confere se a lista está vazia
 
-    /*
+
 
     //combinações de lista -> opção 1
     val a = mutableListOf("Tiago", "Lucas")
