@@ -40,7 +40,7 @@ class McDonald: Menu {
     }
 }
 
-class  Bk: Menu {
+class Bk: Menu {
     override fun comboOfTheDay(): String {
         return "Whopper"
     }
