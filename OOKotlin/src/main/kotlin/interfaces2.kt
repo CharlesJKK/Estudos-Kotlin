@@ -8,10 +8,8 @@ fun buscarSistemaDeLog(): LoggerGenerico{
 
 fun main(){
     val userA = Usuario(buscarSistemaDeLog())
-    userA.criarPublicacao()
 
     val userB = Usuario(buscarSistemaDeLog())
-    userB.criarPublicacao()
 }
 
 interface LoggerGenerico {
