@@ -14,12 +14,19 @@ fun main() {
     users.forEach { println(it) }
 
 
+    val numbers = listOf(1, 2, 3, 4, 5, 6)
+    val numbers2 = listOf(1, 2, 5, 10, 12, 16)
+    val result = numbers.union(numbers2)//Junta duas listas, não repete os elementos e ordena a lista
 
+    result.forEachIndexed{ index, el -> println("index: $index e elemento: $el") }
 
-
-
-
-
+    // é possível fazer um for com diversas regras Ex:
+    // praticamente está escrito de 0 até 20 pulando de 2 em 2 elementos
+    // ao invés de until é possível utilizar .., nessa condições o for também conta com o 20
+    // e também ao invés do until tem o downTo
+    for(i in 0 until 20 step 2){
+        println(i)
+    }
 
     /*
     //Arrays são praticamentes coleções estáticas, com valores fixos.
