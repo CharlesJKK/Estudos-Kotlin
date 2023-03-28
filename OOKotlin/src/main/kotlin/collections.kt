@@ -2,6 +2,9 @@
 
 fun main() {
 
+    //Principais collections = list, set e map
+    
+
     //setOf é uma coleção que não permite adicionar elementos repetidos
     //setOf é imutavel
     //multableSetOf é mutavel
